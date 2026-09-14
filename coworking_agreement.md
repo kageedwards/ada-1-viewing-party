@@ -21,6 +21,8 @@ Freedom to consult Google or ChatGPT to get past hang-ups.
 
 Consider tools for reviewing git commits or use Github's website for it.
 
+We will use a kanban process on Trello.
+
 ## Learning Style
 *How does each team member learn best in project settings?*
 
