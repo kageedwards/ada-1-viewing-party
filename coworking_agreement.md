@@ -42,5 +42,5 @@ Taking a step back at first, and not getting ahead of ourselves.
 *Other co-working agreements that were not captured in the above sections.*
 
 ## Signatures
-Youn Lei Eain      Kage Edwards
+YounLeiEain      Kage Edwards
 Date: September 8th, 2026
