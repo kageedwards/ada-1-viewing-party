@@ -1,7 +1,17 @@
 # ------------- WAVE 1 --------------------
 
-def create_movie(title, genre, rating):
+def create_movie(title: str, genre: str, rating: float) -> dict[str] | None:
     pass
+
+def add_to_watched(user_data: dict[str], movie: dict[str]) -> dict[str]:
+    pass
+
+def add_to_watchlist(user_data: dict[str], movie: dict[str]) -> dict[str]:
+    pass
+
+def watch_movie(user_data: dict[str], title: str) -> dict[str]:
+    pass
+
 
 # -----------------------------------------
 # ------------- WAVE 2 --------------------
