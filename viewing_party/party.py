@@ -11,7 +11,8 @@ def create_movie(title: str, genre: str, rating: float) -> dict[str] | None:
     }
 
 def add_to_watched(user_data: dict[str], movie: dict[str]) -> dict[str]:
-    pass
+    user_data["watched"].append(movie)
+    return user_data
 
 def add_to_watchlist(user_data: dict[str], movie: dict[str]) -> dict[str]:
     pass
