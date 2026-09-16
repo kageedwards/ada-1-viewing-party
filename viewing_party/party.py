@@ -41,7 +41,7 @@ def watch_movie(user_data: dict[str, list], title: str) -> dict[str, list]:
 # ------------- WAVE 2 --------------------
 # -----------------------------------------
 
-def get_watched_avg_rating(user_data):
+def get_watched_avg_rating(user_data: dict[str, list]) -> float:
     if not user_data["watched"]:
         return 0.0
 
