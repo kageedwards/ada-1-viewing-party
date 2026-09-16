@@ -33,7 +33,7 @@ We both learn by iteration. Timeblocking will be CRITICAL.
 
 We both like constructive feedback. It's best if the feedback helps point out misconceptions. It should be collaborative and limited to what's needed to get back on track.
 
-## One Team Communication Skill to Improve
+## One Team Communication Skill to Improvegi
 *What is a teamwork-related skill you want to work on?*
 
 Contributing and communicating clearly among each other to our repo in a way that avoids merge conflicts.
