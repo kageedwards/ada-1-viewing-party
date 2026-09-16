@@ -55,7 +55,22 @@ def get_watched_avg_rating(user_data):
     return average
 
 def get_most_watched_genre(user_data: dict[str, list]) -> str:
-    pass
+    if not user_data["watched"]:
+        return None
+    
+    most_watched_genre = ""
+    most_watched_count = 0
+    genre_counts = {}
+    for i in range(len(user_data["watched"])):
+        genre = user_data["watched"][i].get("genre", "")
+        genre_count = genre_counts.get(genre, 0)
+        genre_counts[genre] = genre_count + 1
+
+        if genre_counts[genre] > most_watched_count:
+            most_watched_genre = genre
+            most_watched_count = genre_counts[genre]
+
+    return most_watched_genre
 
 
 # -----------------------------------------
