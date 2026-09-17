@@ -138,3 +138,18 @@ def get_new_rec_by_genre(user_data: dict[str, list]) -> list:
 
     return recommendations
 
+def get_rec_from_favorites(user_data: dict[str, list]) -> list:
+    recommendations = []
+
+    for favorite in user_data["favorites"]:
+        friend_watched_it = False
+
+        for friend in user_data["friends"]:
+            if favorite in friend["watched"]:
+                friend_watched_it = True
+
+        if friend_watched_it == False:
+            recommendations.append(favorite)
+
+    return recommendations
+

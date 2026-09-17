@@ -74,7 +74,7 @@ def test_unique_rec_from_favorites():
     assert INTRIGUE_2b in recommendations
     assert sonyas_data == clean_wave_5_data()
 
-@pytest.mark.skip()
+#@pytest.mark.skip()
 def test_unique_from_empty_favorites():
     # Arrange
     sonyas_data = {
@@ -96,7 +96,7 @@ def test_unique_from_empty_favorites():
     # Assert
     assert len(recommendations) == 0
 
-@pytest.mark.skip()
+#@pytest.mark.skip()
 def test_new_rec_from_empty_friends():
     # Arrange
     sonyas_data = {
