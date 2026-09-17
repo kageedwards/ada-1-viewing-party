@@ -54,7 +54,7 @@ def get_watched_avg_rating(user_data: dict[str, list]) -> float:
 
     return average
 
-def get_most_watched_genre(user_data: dict[str, list]) -> str:
+def get_most_watched_genre(user_data: dict[str, list]) -> str | None:
     if not user_data["watched"]:
         return None
     
@@ -77,6 +77,42 @@ def get_most_watched_genre(user_data: dict[str, list]) -> str:
 # ------------- WAVE 3 --------------------
 # -----------------------------------------
 
+def get_watched_movies_set(friends_data: list[dict]) -> set[str]:
+    friends_watched = set()
+
+    for friend in friends_data:
+        for movie in friend["watched"]:
+            friends_watched.add(movie["title"])
+
+    return friends_watched
+
+def get_unique_watched(user_data: dict[str, list]) -> list[dict]:
+    unique_movies = {}
+
+    watched_movies = get_watched_movies_set(user_data["friends"])
+
+    for movie in user_data["watched"]:
+        if movie["title"] not in watched_movies:
+            unique_movies[movie["title"]] = movie
+
+    return list(unique_movies.values())
+
+def get_friends_unique_watched(user_data: dict[str, list]) -> list[dict]:
+    unique_movies = {}
+    unique_movies_title_set = set()
+
+    user_watched_movies = get_watched_movies_set([user_data])
+
+    for friend in user_data["friends"]:
+        for movie in friend["watched"]:
+            if (
+                movie["title"] not in user_watched_movies
+                and movie["title"] not in unique_movies_title_set
+            ):
+                unique_movies_title_set.add(movie["title"])
+                unique_movies[movie["title"]] = movie
+
+    return list(unique_movies.values())
         
 # -----------------------------------------
 # ------------- WAVE 4 --------------------
