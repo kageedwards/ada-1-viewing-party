@@ -122,3 +122,19 @@ def get_friends_unique_watched(user_data: dict[str, list]) -> list[dict]:
 # ------------- WAVE 5 --------------------
 # -----------------------------------------
 
+def get_new_rec_by_genre(user_data: dict[str, list]) -> list:
+    most_watched_genre = get_most_watched_genre(user_data)
+    recommendations = []
+
+    if most_watched_genre is None:
+        return recommendations
+
+    for friend in user_data["friends"]:
+        for movie in friend["watched"]:
+            if movie["genre"] == most_watched_genre:
+                if movie not in user_data["watched"]:
+                    if movie not in recommendations:
+                        recommendations.append(movie)
+
+    return recommendations
+
