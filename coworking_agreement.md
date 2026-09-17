@@ -23,6 +23,8 @@ Consider tools for reviewing git commits or use Github's website for it.
 
 We will use a kanban process on Trello.
 
+PROJECT BOARD: https://trello.com/b/kN1BFS19
+
 ## Learning Style
 *How does each team member learn best in project settings?*
 
