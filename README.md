@@ -1,5 +1,7 @@
 # Viewing Party
 
+[![Python CI](https://github.com/kageedwards/ada-1-viewing-party/actions/workflows/python-ci.yml/badge.svg)](https://github.com/kageedwards/ada-1-viewing-party/actions/workflows/python-ci.yml)
+
 ## Skills Assessed
 
 Solving problems with...
